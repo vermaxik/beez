@@ -29,13 +29,13 @@ module Beez
 
     def create_workflow_instance(params = {})
       run(:create_workflow_instance,
-        ::Zeebe::Client::GatewayProtocol::CreateWorkflowInstanceRequest.new(params)
+        ::Zeebe::Client::GatewayProtocol::CreateProcessInstanceRequest.new(params)
       )
     end
 
     def deploy_workflow(params = {})
       run(:deploy_workflow,
-        ::Zeebe::Client::GatewayProtocol::DeployWorkflowRequest.new(params)
+        ::Zeebe::Client::GatewayProtocol::DeployProcessRequest.new(params)
       )
     end
 
